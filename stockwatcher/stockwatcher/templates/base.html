@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		{% block head_favicon %}
+			<link rel="icon" type="image/png" href="{{ STATIC_URL }}image/favicon.ico">
+		{% endblock head_favicon %}
+
+		{% block head_meta %}
+			{% block head_meta_charset %}
+				<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			{% endblock head_meta_charset %}
+			{% block head_meta_contentlanguage %}
+				<meta http-equiv="Content-Language" value="en-US" />
+			{% endblock head_meta_contentlanguage %}
+			{% block head_meta_viewport %}
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			{% endblock head_meta_viewport %}
+		{% endblock head_meta %}
+
+		{% block head_css %}
+			{% block head_css_main %}
+				<link href="https://unpkg.com/bootstrap@4.0.0/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+			{% endblock head_css_main %}
+			{% block head_css_page %}
+
+			{% endblock %}
+		{% endblock head_css %}
+
+		<title>{% block title %}Home {% endblock title %}</title>
+	</head>
+
+	<body>
+			<nav class="navbar navbar-expand-md navbar-dark bg-success">
+				<a class="navbar-brand" href="#">Stock Watcher</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link disabled" href="#">Markets</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link disabled" href="#">Stocks</a>
+						</li>
+					</ul>
+					<form class="form-inline my-2 my-lg-0">
+							<input class="form-control mr-sm-2" disabled type="text" placeholder="Search ticker (e.g. AAPL)..." aria-label="Search">
+							<button class="btn btn-dark my-2 my-sm-0 disabled" type="submit">Search</button>
+					</form>
+					<ul class="nav navbar-nav justify-content-end">
+						<li class="nav-item">
+							<a class="nav-link disabled" href="">Login</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link disabled" href="">Sign up</a>
+						</li>
+
+					</ul>
+
+				</div>
+			</nav>
+			<main role="main">
+				{% block content %}
+					Site content here
+				{% endblock %}
+			</main>
+			<footer>
+				<div class="container">
+					<p>Made with ❤️ by Kevin Quan.</p>
+				</div>
+			</footer>
+
+			{% block footer_js %}
+				{% block footer_js_main %}
+					<script src="https://unpkg.com/jquery@3.3.1/dist/jquery.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+					<script>window.jQuery || document.write('<script src="https://unpkg.com/jquery@3.3.1/dist/jquery.slim.min.js"><\/script>')</script>
+					<script src="https://unpkg.com/popper.js@1.12.8/dist/popper.min.js"></script>
+					<script src="https://unpkg.com/bootstrap@4.1.0/dist/js/bootstrap.min.js"></script>
+					<script>
+						$(function () {
+							$('[data-toggle="tooltip"]').tooltip()
+						})
+					</script>
+				{% endblock footer_js_main %}
+
+			{% endblock footer_js %}
+		</body>
+	</html>

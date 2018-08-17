@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Stock Watcher - Search potential stocks{% endblock title %}
+
+{% block content %}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="display-4">Grow your portfolio in no time.</h1>
+                        <p class="lead">Search for potential stocks to add to your portfolio.</p>
+                        <form class="form-inline">
+                            <label class="sr-only" for="stockTicker">Ticker name</label>
+                            <input class="form-control form-control-lg mt-2" id="stockTicker" type="text" placeholder="Ticker name (e.g. AAPL)">
+                            <button type="submit" class="btn btn-lg btn-success mt-2">Get Stock Details</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="input-group"></div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
