@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}Stock Watcher - Search potential stocks{% endblock title %}
+
+{% block content %}
+    <div class="container">
+            <div class="row">
+                    <div class="col-lg-12">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">Stocks</a></li>
+                                <li class="breadcrumb-item" aria-current="page">{{ symbol }}</li>
+                            </ol>
+                        </nav>
+                    </div>
+            </div>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-4 col-md-12">
+
+                    <h1>{{ company_name}}</h1>
+                    <p class="lead">{{ symbol }}</p>
+                    <p><strong>Latest price:</strong> ${{ latest_price }}
+                    <p><strong>Open:</strong> ${{ open }} </p>
+                    <p><strong>Close:</strong> ${{ close }} </p>
+                    <p><strong>High:</strong> ${{ high }} </p>
+                    <p><strong>Low:</strong> ${{ low }} </p>
+
+                </div>
+                <div class="col-lg-8 col-md-12">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="input-group"></div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
