@@ -16,10 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include, url
-from stocks import views
+from . import views
 
 urlpatterns = [
-    url('', include('stocks.urls')),
-    url(r'^stocks/', include('stocks.urls')),
+    url(r'^', include('stocks.urls'), name='index'),
+    url(r'^stocks/', include('stocks.urls'), name='index'),
     path('admin/', admin.site.urls),
 ]
