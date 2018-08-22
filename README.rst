@@ -1,7 +1,7 @@
 Stock Watcher
 =============
 
-A Django application that lists stock information for you to use.
+A Django application that lists stock information for you to use. This information is pulled from the IEX trading API.
 
 Requirements
 ------------
@@ -43,6 +43,9 @@ Credits
 
 Front-end framework used: `Bootstrap 4`_
 
+Trading data from: `IEX API`_
+
 .. _here: https://www.djangoproject.com/download/
 .. _this website: https://www.miniwebtool.com/django-secret-key-generator/
 .. _Bootstrap 4: https://getbootstrap.com/
+.. _IEX API: https://iextrading.com/developer/docs/
