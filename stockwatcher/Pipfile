@@ -4,7 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-requests = "*"
+# Explicitly set requests to be >=2.20.0 due to a security vulnerability in v. <=2.19.1:
+# https://nvd.nist.gov/vuln/detail/CVE-2018-18074
+requests = ">=2.20.0"
 
 [dev-packages]
 
